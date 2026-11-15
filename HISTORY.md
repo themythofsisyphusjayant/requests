@@ -4,7 +4,11 @@ Release History
 dev
 ---
 
-- \[Short description of non-trivial change.\]
+- Fixed `Response.iter_lines()` raising `TypeError` when a `str` delimiter
+  was passed with `decode_unicode=True` and no response encoding set:
+  the delimiter is now encoded so the byte chunks split correctly.
+  (And, conversely, a `bytes` delimiter is decoded when the chunks
+  are `str`.) (#7645)
 
 
 2.34.2 (2026-05-14)
