@@ -594,7 +594,9 @@ class Session(SessionRedirectMixin):
             Basic/Digest/Custom HTTP Auth.
         :param timeout: (optional) How many seconds to wait for the server to send
             data before giving up, as a float, or a :ref:`(connect timeout,
-            read timeout) <timeouts>` tuple.
+            read timeout) <timeouts>` tuple. A single float applies to both the
+            connect and the read timeout; it is not a time limit on the entire
+            request.
         :type timeout: float or tuple
         :param allow_redirects: (optional) Set to True by default.
         :type allow_redirects: bool
