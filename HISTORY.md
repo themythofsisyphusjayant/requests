@@ -4,7 +4,9 @@ Release History
 dev
 ---
 
-- \[Short description of non-trivial change.\]
+- Fixed `RequestsCookieJar.multiple_domains()` returning inverted results:
+  it returned `True` for cookies from a single domain and `False` for
+  cookies from multiple domains. (#7649)
 
 
 2.34.2 (2026-05-14)
